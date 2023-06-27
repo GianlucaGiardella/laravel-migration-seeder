@@ -8,5 +8,12 @@
     <title>Laravel Migration Seeder</title>
 </head>
 <body>
+    <h1>Laravel Trains</h1>
+
+    @foreach ($trains as $train)
+        <li>
+            {{$train->brand}} {{$train->train_code}} - Partenza: {{$train->departure_station}} alle {{$train->departure_time}} - Arrivo: {{$train->arrival_station}} alle {{$train->arrival_time}}
+        </li>
+    @endforeach
 </body>
 </html>
